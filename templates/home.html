@@ -1,0 +1,25 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharati News Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Bharati News Portal</h1>
+        <div class="options">
+            <a href="{{ url_for('read_news') }}">
+                <img src="{{ url_for('static', filename='read_news.jpg') }}" alt="Read News">
+                <p>Read News</p>
+            </a>
+            <a href="{{ url_for('add_news') }}">
+                <img src="{{ url_for('static', filename='add_news.jpg') }}" alt="Add News">
+                <p>Add News</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

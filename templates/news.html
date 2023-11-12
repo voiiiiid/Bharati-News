@@ -1,0 +1,65 @@
+<!-- templates/news.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .news-item {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .news-item img {
+            float: left;
+            margin-right: 10px;
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        .news-item h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .news-item p {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Latest News</h1>
+
+    {% for news_item in news_data %}
+        <div class="news-item">
+            <img src="{{ news_item.image_url }}" alt="{{ news_item.headline }}">
+            <h2>{{ news_item.headline }}</h2>
+            <p>{{ news_item.description }}</p>
+        </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

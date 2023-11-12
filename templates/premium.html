@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Premium</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .plans-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .plan {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+
+        .plan:hover {
+            transform: scale(1.05);
+        }
+
+        .plan h2 {
+            color: #333;
+        }
+
+        .plan p {
+            color: #666;
+        }
+
+        .plan button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Choose Your Premium Plan</h1>
+
+    <div class="plans-container">
+        <div class="plan">
+            <h2>Basic</h2>
+            <p>Monthly Plan</p>
+            <p>$10/month</p>
+            <button>Select</button>
+        </div>
+
+        <div class="plan">
+            <h2>Standard</h2>
+            <p>Quarterly Plan</p>
+            <p>$25/quarter</p>
+            <button>Select</button>
+        </div>
+
+        <div class="plan">
+            <h2>Premium</h2>
+            <p>Yearly Plan</p>
+            <p>$90/year</p>
+            <button>Select</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
