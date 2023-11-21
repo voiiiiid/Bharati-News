@@ -1,1 +1,43 @@
-flask --app app run --debug
+## Download the PostgreSQL from
+
+- https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+## Flask Installation(in cmd)
+
+### 1. Creating Virtual Environment
+
+- python -m venv venv(environment name)
+
+### 2. Activating the Environment
+
+- .venv/Scripts/activate
+
+### 3. Installation
+
+- pip install flask
+
+### 4. Run the File
+
+- set FLASK_APP = app.py(file name)
+- flask --app app(file.name) run --debug
+
+
+- Connecting Postgresql and Flask
+    
+    ### Installing Dependencies
+    
+    - pip install flask-sqlalchemy flask-marshmallow marshmallow-sqlalchemy (allow us to write database table with python classes)
+    
+    ### Connecting…
+    
+    - app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@localhost/dbname’
+    
+    
+    ### Push the changes into database
+    
+    - open cmd and type python
+    - import db
+    - yourmainfilename.app_context().push()[write this command]
+    - db.create_all() [create all the table]
+    - db.session.add(obj)[add the data to the table]
+    - db.session.commit()[commit the changes]
